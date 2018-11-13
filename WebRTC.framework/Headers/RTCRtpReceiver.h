@@ -10,9 +10,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <WebRTC/RTCMacros.h>
-#import <WebRTC/RTCMediaStreamTrack.h>
-#import <WebRTC/RTCRtpParameters.h>
+#import "RTCMacros.h"
+#import "RTCMediaStreamTrack.h"
+#import "RTCRtpParameters.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -65,7 +65,7 @@ RTC_EXPORT
  *  RTCMediaStreamTrack. Use isEqual: instead of == to compare
  *  RTCMediaStreamTrack instances.
  */
-@property(nonatomic, readonly) RTCMediaStreamTrack *track;
+@property(nonatomic, readonly, nullable) RTCMediaStreamTrack *track;
 
 /** The delegate for this RtpReceiver. */
 @property(nonatomic, weak) id<RTCRtpReceiverDelegate> delegate;

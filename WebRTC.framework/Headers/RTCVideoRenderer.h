@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #endif
 
-#import <WebRTC/RTCMacros.h>
+#import "RTCMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +27,13 @@ RTC_EXPORT
 
 /** The frame to be displayed. */
 - (void)renderFrame:(nullable RTCVideoFrame *)frame;
+
+@end
+
+RTC_EXPORT
+@protocol RTCVideoViewDelegate
+
+- (void)videoView:(id<RTCVideoRenderer>)videoView didChangeVideoSize:(CGSize)size;
 
 @end
 
